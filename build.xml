@@ -56,6 +56,7 @@
                 <!--<path refid="classpath"/>-->
                 <path refid="application"/>
                 <pathelement location="junit.jar" />
+                <pathelement location="junit_ant.jar" />
             </classpath> 
 
           
