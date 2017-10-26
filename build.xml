@@ -40,14 +40,21 @@
     <target name="main" depends="clean,run,junit,junitreport"/>
     
     <property name="report.dir"  value="${build.dir}/junitreport"/>
-
+    
+    <!--<path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>-->
+    
+    <path id="application" location="${jar.dir}/${ant.project.name}.jar"/>
+    
     <target name="junit" depends="jar">
         <mkdir dir="${report.dir}"/>
         <junit printsummary="yes">
            
-            <classpath location="junit.jar" >
-                <path refid="classpath"/>
+            <classpath>
+                <!--<path refid="classpath"/>-->
                 <path refid="application"/>
+                <pathelement location="junit.jar" />
             </classpath> 
 
           
