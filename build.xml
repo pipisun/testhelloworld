@@ -8,13 +8,6 @@
 
     <property name="main-class"  value="oata.HelloWorld"/>
     
-    <javac srcdir="${src.dir}" destdir="${classes.dir}">   
-        <classpath>
-            <pathelement path="junit.jar"/>
-        </classpath>
-    </javac>
-
-
     <target name="clean">
         <delete dir="${build.dir}"/>
     </target>
@@ -22,6 +15,10 @@
     <target name="compile">
         <mkdir dir="${classes.dir}"/>
         <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+        <classpath>
+            <pathelement path="junit.jar"/>
+        </classpath>
+    </javac>
         <!--<copy file="${src.dir}/main/HelloWorld.class" todir="${classes.dir}"/>-->
     </target>
 
