@@ -37,7 +37,7 @@
 
     <target name="clean-build" depends="clean,jar"/>
 
-    <target name="main" depends="clean,run"/>
+    <!--<target name="main" depends="clean,run"/>-->
     
     <property name="report.dir"  value="${build.dir}/junitreport"/>
 
@@ -59,7 +59,7 @@
     
     <target name="junitreport">
         <junitreport todir="${report.dir}">
-            <fileset dir="${report.dir}" includes="TEST-*.xml"/>
+            <fileset dir="${report.dir}" includes="TEST*.xml"/>
             <report todir="${report.dir}"/>
         </junitreport>
     </target>
