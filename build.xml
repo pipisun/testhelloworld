@@ -45,12 +45,10 @@
         <mkdir dir="${report.dir}"/>
         <junit printsummary="yes">
            
-            <classpath location="junit.jar" />
-            <!--    
-            <path refid="classpath"/>
+            <classpath location="junit.jar" >
+                <path refid="classpath"/>
                 <path refid="application"/>
-                <pathelement path="junit.jar"/>
-            </classpath> -->
+            </classpath> 
 
           
             <formatter type="xml"/>
