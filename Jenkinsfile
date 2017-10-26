@@ -5,6 +5,9 @@ node {
         stage('Build') {
             steps {
                 echo 'Building..'
+                checkout scm
+                bat 'make' 
+                archiveArtifacts artifacts: '**/*.java', fingerprint: true 
             }
         }
         stage('Test') {
