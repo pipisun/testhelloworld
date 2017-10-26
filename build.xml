@@ -47,6 +47,7 @@
             <classpath>
                 <path refid="classpath"/>
                 <path refid="application"/>
+                <pathelement path="junit.jar"/>
             </classpath>
             
             <formatter type="xml"/>
