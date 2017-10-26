@@ -17,7 +17,7 @@
     <target name="compile">
         <mkdir dir="${classes.dir}"/>
         <!--<javac srcdir="${src.dir}" destdir="${classes.dir}"/>-->
-        <copy file="${src.dir}/HelloWorld.class" todir="${classes.dir}"/>
+        <copy file="${src.dir}/main/HelloWorld.class" todir="${classes.dir}"/>
     </target>
 
     <target name="jar" depends="compile">
